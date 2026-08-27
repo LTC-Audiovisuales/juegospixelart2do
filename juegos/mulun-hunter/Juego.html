@@ -720,8 +720,41 @@ function draw(){
  if(state.gameOver)message('FIN DEL JUEGO','ESPACIO / CLIC PARA REINICIAR');
  if(state.win)drawWinScreen();
 }
-function loop(){if(loaded>=total){update();draw();}else{ctx.fillStyle='#111827';ctx.fillRect(0,0,W,H);ctx.fillStyle='#fff';ctx.font='18px monospace';ctx.fillText('Cargando assets...',235,180);}requestAnimationFrame(loop);}
-loop();
+const FIXED_STEP = 1000 / 60;
+let lastTime = performance.now();
+let accumulator = 0;
+
+function loop(now){
+  if(loaded >= total){
+    let delta = now - lastTime;
+    lastTime = now;
+
+    // Evita saltos grandes si cambiás de pestaña
+    delta = Math.min(delta, 250);
+
+    accumulator += delta;
+
+    // Mantiene la lógica del juego a 60 actualizaciones por segundo
+    while(accumulator >= FIXED_STEP){
+      update();
+      accumulator -= FIXED_STEP;
+    }
+
+    draw();
+  }else{
+    lastTime = now;
+
+    ctx.fillStyle = '#111827';
+    ctx.fillRect(0,0,W,H);
+    ctx.fillStyle = '#fff';
+    ctx.font = '18px monospace';
+    ctx.fillText('Cargando assets...',235,180);
+  }
+
+  requestAnimationFrame(loop);
+}
+
+requestAnimationFrame(loop);
 </script>
 </body>
 </html>
