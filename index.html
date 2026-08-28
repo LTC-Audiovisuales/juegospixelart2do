@@ -35,6 +35,36 @@ footer{border-top:1px solid var(--line);padding:28px 0 38px;color:var(--muted);f
 <main id="inicio">
 <section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><div class="eyebrow">Proyecto de clase · Pixelart</div><h1>Una galería para jugar lo que hacemos.</h1><p class="lede">Plataforma de juegos desarrollados en 2° año. Cada portada funciona como acceso directo a un proyecto y la colección crecerá con las producciones del curso.</p><div class="hero-actions"><button class="btn btn-primary" id="featuredPlay" type="button">Jugar</button><a class="btn btn-secondary" href="#juegos">Ver juegos</a></div></div><div class="hero-cover"><div class="cover-frame"><img id="featuredCover" alt="Portada del juego"></div></div></div></section>
 <section class="section" id="juegos"><div class="wrap"><div class="section-head"><h2>Selección de juegos</h2><p>Elegí una portada para entrar al juego. La plataforma se adapta tanto a computadora como a celular.</p></div><div class="game-grid" id="gameGrid"></div></div></section>
+<section class="section" id="sobre-proyecto">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Sobre el proyecto</h2>
+    </div>
+
+    <div style="max-width:820px;color:#c7cfdd;line-height:1.7;font-size:16px">
+      <p>
+        Esta plataforma reúne los trabajos realizados por estudiantes de 2° año
+        del Centro Polivalente de Arte en el espacio curricular
+        <strong>Expresión Gráfica y Nuevas Tecnologías</strong>.
+      </p>
+
+      <p>
+        La propuesta parte de una misma estructura de videojuego, sobre la cual
+        cada estudiante desarrolla su propia versión mediante el diseño de
+        personajes, escenarios, objetos, paletas de color y demás elementos visuales.
+      </p>
+
+      <p>
+        El proyecto permite aplicar de forma práctica los contenidos trabajados
+        en la materia dentro de una producción interactiva y jugable.
+      </p>
+
+      <p>
+        <strong>Diseño y desarrollo de la propuesta: Luciano Tambella.</strong>
+      </p>
+    </div>
+  </div>
+</section>
 </main>
 <footer><div class="wrap footer-inner"><div class="footer-credit">Diseñado por Luciano Tambella</div><div>Expresión Gráfica y Nuevas Tecnologías · 2° Año</div></div></footer>
 <div class="player" id="player" aria-hidden="true"><div class="player-bar"><div class="player-title" id="playerTitle"></div><div class="player-actions"><button class="player-btn" id="newTab" type="button">Abrir aparte</button><button class="player-btn" id="reload" type="button">Reiniciar</button><button class="player-btn" id="fullscreen" type="button">Pantalla completa</button><button class="player-btn close" id="close" type="button">Cerrar</button></div></div><iframe class="player-frame" id="gameFrame" title="Juego" tabindex="0" allow="fullscreen; autoplay" allowfullscreen></iframe></div>
