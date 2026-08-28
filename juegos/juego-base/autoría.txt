@@ -1,0 +1,4 @@
+Proyecto didáctico para Expresión Gráfica y Nuevas Tecnologías.
+Diseño y desarrollo de plantilla: Profesor Luciano Tambella.
+
+Versión base de trabajo con estética plana y assets reemplazables por el estudiantado.
